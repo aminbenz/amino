@@ -5,8 +5,6 @@ import { useSession, signOut } from "next-auth/react";
 export default function Navbar() {
   const { data: session, status } = useSession({ required: true });
 
-  console.log(session);
-
   return (
     <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
       <div className="container flex flex-wrap items-center justify-between mx-auto">
@@ -23,11 +21,11 @@ export default function Navbar() {
             data-dropdown-placement="bottom"
           >
             <span className="sr-only">Open user menu</span>
-            <img
+            {/* <img
               className="w-8 h-8 rounded-full"
-              src={session?.user?.image}
+              src={session?.user?.image || ""}
               alt="user photo"
-            />
+            /> */}
           </button>
           <div
             className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"

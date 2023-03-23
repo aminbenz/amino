@@ -1,4 +1,4 @@
-const ROLES = [
+const ROLES: any = [
   [1000, "User"],
   [2000, "CustomerService"],
   [3000, "SupplyManager"],

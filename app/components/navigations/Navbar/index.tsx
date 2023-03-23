@@ -6,15 +6,15 @@ import IsAuth from "./IsAuth";
 
 interface LinkProps {
   name: string;
-  href: string;
+  href?: string;
   target?: string;
 }
 
 const routes = [
   { name: "Home", href: "/" },
   // { name: "Dashboard", href: "/dashboard" },
-  { name: "Docs"},
-  { name: "Users"},
+  { name: "Docs" },
+  { name: "Users" },
   { name: "Register", href: "/auth/register" },
 ];
 

@@ -44,7 +44,7 @@ const Button = ({
         height,
         color: color,
         borderRadius,
-        cursor: isLoading && "wait",
+        cursor: isLoading ? "wait" : "default",
       }}
       className={styles.button}
       {...rest}

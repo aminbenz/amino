@@ -19,6 +19,7 @@
         "name": "next"
       }
     ],
+    "strictNullChecks": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
@@ -34,17 +35,6 @@
       "@hooks/*": ["src/hooks/*"]
     }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "src/helpers/theme.js",
-    "src/components/index.js",
-    "src/components/index.js",
-    "app/artist/LoginButton.jsx",
-    "app/users/[user_id]",
-    "app/api/salem/route.ts"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }

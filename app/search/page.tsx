@@ -10,6 +10,7 @@ type Props = {
 export async function generateMetadata({ searchParams: { q: searchTerm } }: Props) {
     const wikiData: Promise<SearchResult> = getWikiResults(searchTerm)
     const data = await wikiData
+
     const displayTerm = searchTerm.replaceAll('%20', ' ')
 
     if (!data?.query?.pages) {

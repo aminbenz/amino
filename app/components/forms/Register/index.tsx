@@ -4,15 +4,13 @@ import inputs from "./fields"
 import "./styles.scss"
 
 interface FormValues {
+  [key: string]: string;
   name: string;
   email: string;
   password: string;
 }
-
 interface FormErrors {
-  name?: string;
-  email?: string;
-  password?: string;
+  [key: string]: string;
 }
 
 const RegistrationForm: React.FC = () => {
