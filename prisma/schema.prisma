@@ -1,0 +1,64 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  email String  @unique
+  fname String
+  lname String
+  name  String
+  username String  @unique
+  password String
+  phone String?
+  avatar String?
+  birth DateTime?
+  gender Gender?
+  type Type? @default(Normal)
+  verified_email Boolean? @default(false)
+  roles Role[] @default([USER])
+  title String?
+  // bio String
+  // hobbies
+  // locales
+  status Status? @default(Active)
+  // company
+  role   Role?     @default(USER)
+  profile Profile?
+}
+
+model Profile {
+  id     String @id @default(auto()) @map("_id") @db.ObjectId
+  bio    String
+  user   User   @relation(fields: [user_id], references: [id])
+  user_id String @unique @db.ObjectId
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum Gender {
+  Male
+  Female
+}
+
+enum Type {
+  Normal
+  Member
+  Employee
+}
+
+enum Status {
+  Active
+  Inactive
+  Banned
+}
+
+

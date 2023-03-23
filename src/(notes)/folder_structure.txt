@@ -1,0 +1,48 @@
+my-app/
+├── node_modules/
+├── public/
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   │   ├── common/
+│   │   ├── layout/
+│   │   └── pages/
+│   ├── pages/
+│   ├── store/
+│   │   ├── actions/
+│   │   ├── reducers/
+│   │   └── store.ts
+│   ├── styles/
+│   │   ├── base.scss
+│   │   └── tailwind.css
+│   └── utils/
+├── .env
+├── .env.local
+├── .env.production
+├── .gitignore
+├── next-env.d.ts
+├── package.json
+├── README.md
+└── yarn.lock
+
+
+
+public: This folder contains the public assets of your project, such as the favicon.
+
+src: This is the source code of your project.
+
+components: This folder contains the shared UI components of your application, such as the header, footer, and page components.
+common: This folder contains common components, such as buttons and inputs.
+layout: This folder contains the layout components, such as the header and footer.
+pages: This folder contains the page components, such as the home page and about page.
+pages: This folder contains the Next.js pages.
+store: This folder contains the Redux store of your application, including the actions, reducers, and the store itself.
+styles: This folder contains the styles of your application, such as the base stylesheet and the tailwind.css file.
+utils: This folder contains utility functions, such as those for making API requests.
+.env, .env.local, and .env.production: These files contain environment variables for development, local development, and production, respectively.
+
+next-env.d.ts: This file is used to type check environment variables in Next.js.
+
+package.json: This file contains the dependencies and scripts of your project.
+
+README.md: This file contains the documentation of your project.

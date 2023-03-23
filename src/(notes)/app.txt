@@ -1,0 +1,12 @@
+  name: "Amino",
+  title: "Amino a starter template",
+  description:
+    "Ultimate starter template, created with the latest version of Nextjs 13 and Typescript with an advanced folder structure for large-scale applications.",
+  type: "website",
+  url: "https://amino.vercel.app",
+  image: "/brand.svg",
+  keywords: "starter template",
+  
+  tachnologeis: Nextjs13 (next-auth) / Typescript / Prisma / Redux RTK / SASS / Tailwindcss /
+            Framer motion / Flowbite / react-email / react-hot-toast / react
+            icons & hero icons
