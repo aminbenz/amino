@@ -1,7 +1,3 @@
-import { getServerSession } from "next-auth";
-import Link from "next/link";
-import { authOptions } from "@pages/api/auth/[...nextauth]";
-
 export default async function Dashboard() {
   return (
     <main className="p-4 sm:ml-64">

@@ -9,7 +9,7 @@ export default async function RootLayout({
     <html lang="en">
       <head />
       <body>
-        <Navbar />
+        {/* <Navbar /> */}
         <Sidebar />
         {children}
       </body>

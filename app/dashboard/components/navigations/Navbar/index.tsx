@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";
 
 export default function Navbar() {
-  const { data: session, status } = useSession({ required: true });
+  // const { data: session, status } = useSession({ required: true });
 
   return (
     <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
@@ -23,7 +23,7 @@ export default function Navbar() {
             <span className="sr-only">Open user menu</span>
             {/* <img
               className="w-8 h-8 rounded-full"
-              src={session?.user?.image || ""}
+              src={session?.user?.image}
               alt="user photo"
             /> */}
           </button>
@@ -66,7 +66,7 @@ export default function Navbar() {
               </li>
               <li
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                onClick={() => signOut()}
+              // onClick={() => signOut()}
               >
                 Sign out
               </li>
