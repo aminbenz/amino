@@ -11,7 +11,7 @@
     <a href="https://aminoo.vercel.app/">View Demo</a>
   </p>
   <!-- thumbnail -->
-  <img src="https://i.ibb.co/VjPMmYJ/smartmockups-lflm2b4n.jpg">
+  <img src="https://i.ibb.co/d6mjLYy/smartmockups-lfmrdaq2-removebg-preview-1.png">
 </div>
 
 <br/>
