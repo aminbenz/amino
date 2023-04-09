@@ -7,23 +7,34 @@ type Post = {
 
 type User = {
   id: string;
-  name: string;
-  fname: string;
-  lname: string;
   email: string;
-  address: {
+  name: string;
+  username: string;
+  first_name: string;
+  last_name: string;
+  password: string;
+  avatar: string;
+  birthdate: string;
+  position: string;
+  ip: string;
+  bio: string;
+  locale: string;
+  verified_email: boolean;
+  locale: string;
+  gender: MALE | FEMALE;
+  address?: {
     street: string;
     suite: string;
     city: string;
-    zipcode: string;
+    zip: string;
     geo: {
       lat: string;
       lng: string;
     };
   };
   phone: string;
-  website: string;
-  company: {
+  website?: string;
+  company?: {
     name: string;
     bs: string;
   };

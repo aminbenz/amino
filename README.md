@@ -11,7 +11,7 @@
     <a href="https://aminoo.vercel.app/">View Demo</a>
   </p>
   <!-- thumbnail -->
-  <img src="https://i.ibb.co/VjPMmYJ/smartmockups-lflm2b4n.jpg">
+  <img src="https://i.ibb.co/d6mjLYy/smartmockups-lfmrdaq2-removebg-preview-1.png">
 </div>
 
 <br/>
@@ -38,7 +38,7 @@ Amino is the ultimate starter template for Next.js 13 and TypeScript, featuring 
 
 ### Features
 
-- Latest version of Next.js (v13)
+- Latest version of Next.js (v13.3)
 - Typescript
 - NextAuth for authentication
 - Prisma for database management
@@ -79,11 +79,11 @@ For more information, please refer to the documentation and examples.
 
 ### Demo
 
-Check out the live demo of Amino at https://aminoo.vercel.app.
+Check out the live demo of Amino at [live Demo][website] .
 
 ### Credits
 
-Amino is built and maintained by Amin Benz.
+Amino is built and maintained by [@aminbenz][me].
 
 ### License
 
@@ -95,14 +95,14 @@ This project is licensed under the MIT License. Feel free to use, modify, and di
 | :------------------ | :------------------: | ------: |
 | React               | JavaScript Framework |     v18 |
 | Next.js & next-auth |   React Framework    |     v13 |
-| Typescript          | Programing Language  |      v5 |
+| Typescript          | Programming Language |      v5 |
 | Zod                 |     Type Safety      |      v4 |
 | Prisma              | database management  |      v4 |
 | SASS                | database management  |      v1 |
 | Framer Motion       |      animations      |     v10 |
-| tailwindcss         |      UI Libary       |      v5 |
+| tailwindcss         |      UI Library      |      v5 |
 | Flowbite            |    UI components     |      v2 |
-| materialui          |      UI Libary       |      v5 |
+| materialui          |      UI Library      |      v5 |
 | React Email         |  responsive emails   |      v5 |
 | React Hot Toast     |    notifications     |      v3 |
 | React Icons         |        Icons         |      v2 |
@@ -112,21 +112,16 @@ This project is licensed under the MIT License. Feel free to use, modify, and di
 
 ### Contact
 
-Live Website: [live website][live-website]
-Github Repo : [Project Link][project-link]
+Live Website: [live website][website]
+Github Repo : [Project Link][repo]
 
 my Name - [@aminbenz][me]
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- brand -->
-
-[brand-name]: Amino
-
 <!-- links -->
 
-[project-link]: https://github.com/aminbenz/amino
-[live-website]: https://aminoo.vercel
+[repo]: https://github.com/aminbenz/amino
 [website]: https://aminoo.vercel.app/
 [me]: https://aminbenz.vercel.app
 

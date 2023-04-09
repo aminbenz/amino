@@ -1,9 +1,9 @@
 {
   "name": "Amino",
-  "title": "a starter template (lite)",
+  "title": "A starter template (lite)",
   "description": "Starter template, created with Nextjs 13 and Typescript with an advanced folder structure for large-scale applications. supported MDX including theming and authentication system (SEO & Accessibility 100%)",
   "type": "website",
-  "url": "https://amino.vercel.app",
+  "url": "https://aminoo.vercel.app",
   "logo": "/brand.svg",
   "tachnologeis": [
     "Nextjs13 (next-auth)",
@@ -14,9 +14,15 @@
     "Framer motion",
     "Flowbite"
   ],
-  "creator": "Amin Benz",
-  "publisher": "Amin Benz",
+  "keywords": ["Starter template", "Next.js"],
+  "creator": "@aminbenz",
+  "publisher": "@aminbenz",
+  "authors": [{ "name": "Amin Benz", "url": "https://github.com/aminbenz" }],
+  "category": "Template",
   "locale": "en-US",
-  "theme_color": "purple",
-  "color_scheme": "dark"
+  "theme_color": [
+    { "media": "(prefers-color-scheme: light)", "color": "cyan" },
+    { "media": "(prefers-color-scheme: dark)", "color": "black" }
+  ],
+  "color_scheme": "light dark"
 }

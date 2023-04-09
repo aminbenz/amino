@@ -119,7 +119,7 @@ my Name - [@aminbenz][me]
 
 [project-link]: https://github.com/aminbenz/changeme
 [live-website]: https://changeme.vercel.app/
-[website]: https://aminbenz.vercel.app/
+[my-website]: https://aminbenz.vercel.app/
 [me]: https://aminbenz.vercel.app/
 
 <!-- pages -->

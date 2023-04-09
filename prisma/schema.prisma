@@ -1,42 +1,64 @@
-generator client {
-  provider = "prisma-client-js"
-}
-
 datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
-  email String  @unique
-  fname String
-  lname String
-  name  String
-  username String  @unique
-  password String
-  phone String?
-  avatar String?
-  birth DateTime?
-  gender Gender?
-  type Type? @default(Normal)
-  verified_email Boolean? @default(false)
-  roles Role[] @default([USER])
-  title String?
-  // bio String
-  // hobbies
-  // locales
-  status Status? @default(Active)
-  // company
-  role   Role?     @default(USER)
-  profile Profile?
+generator client {
+  provider = "prisma-client-js"
 }
 
-model Profile {
-  id     String @id @default(auto()) @map("_id") @db.ObjectId
-  bio    String
-  user   User   @relation(fields: [user_id], references: [id])
-  user_id String @unique @db.ObjectId
+// model Profile {
+//   id      String  @id @default(auto()) @map("_id") @db.ObjectId
+//   bio     String?
+//   hobbies        String[]        @default([])
+//   user    User    @relation(fields: [user_id], references: [id])
+//   user_id String  @unique @db.ObjectId
+// }
+
+model User {
+  id             String          @id @default(auto()) @map("_id") @db.ObjectId
+  email          String          @unique
+  first_name     String
+  last_name      String
+  name           String
+  username       String          @unique
+  password       String
+  phone          String?
+  avatar         String?
+  birthdate      DateTime?
+  gender         Gender?
+  position       String?
+  ip             String?
+  locale         String?
+  address        Address?
+  preference     UserPreference?
+  verified_email Boolean         @default(false)
+  type           Type            @default(NORMAL)
+  role           Role            @default(USER)
+  status         Status          @default(ACTIVE)
+  bio            String?
+  hobbies        String[]        @default([])
+  created_at     DateTime        @default(now())
+  updated_at     DateTime        @updatedAt
+  // company
+  // profile        Profile?
+}
+
+model Address {
+  id      String  @id @default(auto()) @map("_id") @db.ObjectId
+  zip     String?
+  street  String?
+  city    String?
+  state   String?
+  user    User    @relation(fields: [user_id], references: [id])
+  user_id String  @unique @db.ObjectId
+}
+
+model UserPreference {
+  id            String  @id @default(auto()) @map("_id") @db.ObjectId
+  email_updates Boolean
+  user          User    @relation(fields: [user_id], references: [id])
+  user_id       String  @unique @db.ObjectId
 }
 
 enum Role {
@@ -45,20 +67,18 @@ enum Role {
 }
 
 enum Gender {
-  Male
-  Female
+  MALE
+  FEMALE
 }
 
 enum Type {
-  Normal
-  Member
-  Employee
+  NORMAL
+  MEMBER
+  EMPLOYEE
 }
 
 enum Status {
-  Active
-  Inactive
-  Banned
+  ACTIVE
+  INACTIVE
+  BANNED
 }
-
-

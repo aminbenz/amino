@@ -1,0 +1,43 @@
+.error-page {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bg);
+  color: var(--text);
+  z-index: 100;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  .title {
+    font-weight: 900;
+    font-weight: bolder;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
+  .desc {
+    color: var(--disabled);
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  .btn-group {
+    margin-top: 2rem;
+    display: flex;
+    gap: 10px;
+  }
+}
+
+button:hover svg {
+  transform: rotate(120deg);
+  transition: transform 0.2s ease-in-out;
+}

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Card from "./components/elements/Card";
+import Spinner from "@/components/elements/Spinner";
 
 export default function Home() {
   return (

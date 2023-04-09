@@ -1,0 +1,12 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+.form__title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}

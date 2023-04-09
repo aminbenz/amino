@@ -1,41 +1,47 @@
-
-import getUserById from "@/lib/users/getUserById"
-import getUserPosts from "@/lib/users/getUserPosts"
-import type { Metadata } from "next"
-import { Suspense } from "react"
-import UserPosts from "./components/UserPosts"
+// import getUserById from "@/lib/users/getUserById"
+import { getUserById } from "@/lib/prisma/users";
+import getUserPosts from "@/lib/users/getUserPosts";
+import { User } from "@prisma/client";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { Suspense } from "react";
+import UserTable from "./components/UserTable";
+import Link from "next/link";
 
 type Params = {
-    params: {
-        user_id: string
-    }
-}
+  params: {
+    user_id: string;
+  };
+};
 
-export async function generateMetadata({ params: { user_id } }: Params): Promise<Metadata> {
-    const userData: Promise<User> = getUserById(user_id)
-    const user: User = await userData
+export async function generateMetadata({
+  params: { user_id },
+}: Params): Promise<Metadata> {
+  // @ts-ignore
+  const user: User = await getUserById(user_id);
 
-    return {
-        title: user.name,
-        description: `This is the page of ${user.name}`
-    }
+  return {
+    title: user.name,
+    description: `This is the page of ${user.name}`,
+  };
 }
 
 export default async function UserPage({ params: { user_id } }: Params) {
-    const userData: Promise<User> = getUserById(user_id)
-    const userPostsData: Promise<Post[]> = getUserPosts(user_id)
+  // @ts-ignore
+  const user: User = await getUserById(user_id);
 
-    // const [user, userPosts] = await Promise.all([userData, userPostsData])
+  if (!user) {
+    notFound();
+  }
 
-    const user = await userData
-    return (
-        <main>
-            <h2>{user.name}</h2>
-            <br />
-            <Suspense fallback={<h2>Loading...</h2>}>
-                {/* @ts-expect-error Server Component */}
-                <UserPosts promise={userPostsData} />
-            </Suspense>
-        </main>
-    )
+  return (
+    <main>
+      <Link href="/users/add">
+        <button className="btn">Add User</button>
+      </Link>
+      {/* @ts-ignore */}
+      <UserTable user={user} />
+      <br />s{" "}
+    </main>
+  );
 }

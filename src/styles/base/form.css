@@ -1,0 +1,127 @@
+form {
+  display: grid;
+  gap: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  & button {
+    margin-top: 10px;
+    height: 30px;
+  }
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input:has(*:required) label:after {
+  content: "*";
+  color: var(--danger);
+  margin-left: 0.25rem;
+}
+
+select,
+input,
+textarea {
+  border: 1px solid var(--border-color);
+  border-radius: var(--rounded-sm);
+  padding: 14px 15px;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+
+select,
+input,
+textarea,
+label {
+  font-weight: 500;
+}
+
+input::placeholder {
+  font-weight: 400;
+}
+label {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus-visible {
+  outline: 1px solid var(--focus);
+}
+
+input:invalid:not(:focus) {
+  border-color: var(--danger);
+}
+
+input:focus {
+  border-color: var(--focus);
+}
+
+input:focus + .error-msg {
+  display: none;
+}
+
+input:invalid:not(:focus) + .error-msg {
+  display: block;
+}
+
+input:placeholder-shown:not(:focus) {
+  border-color: var(--border-color);
+}
+
+input:placeholder-shown:not(:focus) + .error-msg {
+  display: none;
+}
+
+input:valid + .error-msg {
+  display: none;
+}
+
+form:valid [type="submit"] {
+  background: var(--primary);
+  color: var(--text);
+  cursor: pointer;
+}
+
+form:invalid [type="submit"] {
+  background: var(--disabled);
+  color: var(--text);
+  cursor: not-allowed;
+}
+
+.error-msg,
+.helper-text,
+.caption {
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+.error-msg {
+  color: var(--danger);
+}
+
+.helper-text {
+  color: var(--secondary);
+}
+
+.caption {
+  color: var(--secondary);
+  text-align: right;
+}
+
+input:required,
+select:required,
+textarea:required {
+  background-color: rgba(255, 255, 255, 0.151);
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+  opacity: 0.5;
+}

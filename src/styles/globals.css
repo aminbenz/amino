@@ -1,3 +1,15 @@
+@import "./base/reset.css";
+/* @import "./base/tailwind.css"; */
+@import "./base/root.css";
+@import "./base/button.css";
+@import "./base/form.css";
+@import "./skeleton.css";
+@import "./loader.css";
+@import "./not-found.css";
+@import "./error.css";
+@import "./gradient.css";
+@import "./spinner.css";
+
 @media (prefers-color-scheme: light) {
   :root {
     --foreground-rgb: 0, 0, 0;
@@ -87,12 +99,44 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.btn:not(:disabled) {
+  --_bg: linear-gradient(hsl(228 94% 67%), hsl(228 81% 59%));
+  --_border: hsl(228 89% 63%);
+  --_text: hsl(228 89% 100%);
+  --_ink-shadow: 0 1px 0 hsl(228 57% 50%);
+  --_highlight: hsl(228 94% 67% / 20%);
+}
+
+.badge {
+  border-radius: 5px;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  background-color: rgb(149 186 243 / 20%);
+  color: var(--primary);
+
+  &.warn {
+    background-color: #633112;
+    color: var(--warn);
+  }
+  &.danger {
+    background-color: rgb(255 46 46 / 20%);
+    color: var(--danger);
+  }
+
+  &.success {
+    background-color: #014737;
+    color: #84e1bc;
+  }
+  &.primary {
+    background-color: rgb(149 186 243 / 20%);
+    color: var(--primary);
   }
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.center {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
